@@ -1,7 +1,7 @@
 {
-  "name": "nextra-docs-template",
+  "name": "til",
   "version": "0.0.1",
-  "description": "Nextra docs template",
+  "description": "Today I Learned",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -9,23 +9,25 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/shuding/nextra-docs-template.git"
+    "url": "git+https://github.com/ferhatelmas/til.git"
   },
-  "author": "Shu Ding <g@shud.in>",
+  "author": "Ferhat Elmas <elmas.ferhat@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/shuding/nextra-docs-template/issues"
+    "url": "https://github.com/ferhatelmas/til/issues"
   },
-  "homepage": "https://github.com/shuding/nextra-docs-template#readme",
+  "homepage": "https://github.com/ferhatelmas/til#readme",
   "dependencies": {
-    "next": "^13.0.6",
-    "nextra": "latest",
-    "nextra-theme-docs": "latest",
+    "next": "^14.0.4",
+    "nextra": "^2.13.2",
+    "nextra-theme-docs": "^2.13.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@types/node": "18.11.10",
-    "typescript": "^4.9.3"
-  }
+    "@types/node": "^20.10.4",
+    "@types/react": "^18.2.45",
+    "typescript": "^5.3.3"
+  },
+  "packageManager": "yarn@4.0.2"
 }
