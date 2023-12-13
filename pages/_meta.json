@@ -1,5 +1,6 @@
 {
   "index": "Introduction",
+  "git": "Git",
   "postgresql": "PostgreSQL",
   "about": {
     "title": "About",
