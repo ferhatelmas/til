@@ -2,6 +2,7 @@
   "index": "Introduction",
   "git": "Git",
   "postgresql": "PostgreSQL",
+  "ubuntu": "Ubuntu",
   "about": {
     "title": "About",
     "type": "page"

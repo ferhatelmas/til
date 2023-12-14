@@ -1,0 +1,37 @@
+## How to disable IPv6?
+
+To check status:
+
+```sh
+cat /proc/sys/net/ipv6/conf/all/disable_ipv6
+0
+```
+
+Zero means it's enabled, proceed.
+
+### Temporary
+
+```sh
+sudo sysctl -w net.ipv6.conf.all.disable_ipv6=1
+sudo sysctl -w net.ipv6.conf.default.disable_ipv6=1
+sudo sysctl -w net.ipv6.conf.lo.disable_ipv6=1
+```
+
+### Permanent
+
+Edit `/etc/default/grub` such that:
+
+```sh
+GRUB_CMDLINE_LINUX_DEFAULT="quiet splash ipv6.disable=1"
+GRUB_CMDLINE_LINUX="ipv6.disable=1"
+```
+
+and then run `sudo update-grub`.
+
+import { Callout } from 'nextra/components'
+
+<Callout type="info" emoji="ℹ️">
+  This might be needed if
+  * Chrome gives `ERR_NETWORK_CHANGED` regularly
+  * A container with `-net=host` networking is running
+</Callout>
