@@ -1,0 +1,30 @@
+## How to manage different git profiles?
+
+Use git config includes.
+
+Let's say we have a generic profile that stays in `~/.gitconfig`.
+We also have a work profile that we need to use for work related commits (i.e. different email, signing, etc.).
+
+If our general development happens in `~/dev` and we put work related repos under `~/dev/work`,
+then we can add overrides into a file `~/.gitconfig-work`, for example.
+
+#### .gitconfig
+
+```
+[user]
+    name = Hero
+    email = dev@abc.com
+[includeIf "gitdir:~/dev/work"]
+    path = ~/.gitconfig-work
+```
+
+#### .gitconfig-work
+
+```
+[user]
+    name = Hero
+    email = dev@work.com
+    signingkey = 123467
+[commit]
+    gpgsign = true
+```
